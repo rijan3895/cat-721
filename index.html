@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Example</title>
+    <style>
+        body {
+            background-image: url('https://example.com/bitcoin-logo.png'); /* Replace with your Bitcoin logo URL */
+            background-size: cover; /* Cover the entire body */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            background-position: center; /* Center the image */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 20px; /* Padding around the input area */
+            border-radius: 8px; /* Rounded corners */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            margin-bottom: 20px; /* Space below the black box */
+        }
+        .cat-title {
+            font-size: 36px; /* Font size for CAT 721 */
+            color: white; /* White text color */
+            margin-bottom: 10px; /* Space between title and input */
+        }
+        .cat20-link {
+            font-size: 24px; /* Font size for the link */
+            color: #007BFF; /* Link color */
+            text-decoration: none; /* Remove underline */
+        }
+        .cat20-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        label {
+            font-size: 24px; /* Increased font size for the label */
+            margin-bottom: 5px; /* Space between label and input */
+            color: white; /* White text for label */
+        }
+        input[type="text"] {
+            width: 400px; /* Width of the input */
+            height: 50px; /* Increased height of the input */
+            padding: 10px;
+            font-size: 20px; /* Increased font size for input */
+            border: none; /* No border */
+            border-radius: 4px;
+            margin-bottom: 10px; /* Space between input and button */
+        }
+        button {
+            padding: 15px 20px; /* Increased button padding */
+            font-size: 20px; /* Increased font size for button */
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF; /* Button color */
+            color: white; /* Text color */
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker button on hover */
+        }
+        .result {
+            margin-top: 20px; /* Space above the result */
+            font-size: 24px; /* Font size for the result */
+            color: white; /* White text color */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://cat20.app/" class="cat20-link" target="_blank">CAT 20</a>
+    <div class="search-container">
+        <div class="cat-title">CAT 721</div>
+        <label for="btcAddress">Enter Fractal BTC Address</label>
+        <input type="text" id="btcAddress" placeholder="Search Your CAT721">
+        <button type="button" onclick="searchNFT()">Search</button>
+        <div class="result" id="result"></div> <!-- Placeholder for result -->
+    </div>
+
+    <script>
+        function searchNFT() {
+            const btcAddress = document.getElementById('btcAddress').value;
+            const resultDiv = document.getElementById('result');
+            
+            // Check if the entered address matches the specific BTC address
+            if (btcAddress === 'bc1plgmxs0srmdk9zejw4pfn4efzwfk4dl302vl705churanr6pqwwcs7vqxa4') {
+                resultDiv.textContent = '1 CATIZEN NFT'; // Display result
+            } else {
+                resultDiv.textContent = 'No NFTs found'; // Display if no match
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
